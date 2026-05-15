@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className="bg-background text-text-primary antialiased">
         <Providers>
           <div className="flex min-h-screen">
-            {/* Sidebar - desktop only */}
+            {/* Sidebar - desktop only, includes mobile bottom nav */}
             <Sidebar />
             {/* Main content area */}
             <div className="flex-1 flex flex-col min-h-screen md:ml-64">
@@ -32,15 +32,8 @@ export default function RootLayout({
               </main>
             </div>
           </div>
-          {/* Mobile bottom nav */}
-          <MobileNav />
         </Providers>
       </body>
     </html>
   );
-}
-
-function MobileNav() {
-  'use client';
-  return null; // MobileNav is rendered client-side inside Sidebar component
 }
